@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拉麵怪奇物語 — 深夜手作的解壓拉麵</title>
+<meta name="description" content="一款純手作視角、一次只做一碗的直式手機拉麵小品。從湯鍋舀湯、撈麵、灑料，做好眼前這一碗。">
+<link rel="icon" href="logo.png">
+<meta property="og:title" content="拉麵怪奇物語">
+<meta property="og:description" content="深夜手作的解壓拉麵">
+<meta property="og:image" content="logo.png">
+<style>
+  :root{
+    --ink:#2c241a; --muted:#7c6c52; --line:#e7dcc6;
+    --broth:#e9b63a; --broth-d:#cf9a28; --red:#d8352f;
+    --bg:#f4ecdb; --card:#fffdf8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; color:var(--ink); background:var(--bg);
+    font-family:"PingFang TC","Noto Sans TC","Hiragino Sans TC","Microsoft JhengHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.8; -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:980px; margin:0 auto; padding:0 22px;}
+
+  /* hero */
+  .hero{
+    text-align:center; padding:64px 22px 40px;
+    background:radial-gradient(120% 90% at 50% -20%, #fff6e3 0%, #f1dcae 55%, #e7c98c 100%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero img.logo{width:120px; height:120px; border-radius:28px;
+    box-shadow:0 14px 34px rgba(90,50,20,.28); margin-bottom:22px;}
+  .hero h1{font-size:40px; margin:0 0 8px; letter-spacing:1px; text-shadow:0 1px 0 #fff7;}
+  .hero .sub{font-size:19px; color:#6a4f2a; font-weight:600; margin-bottom:4px;}
+  .hero .tag{font-size:15px; color:var(--muted); max-width:520px; margin:14px auto 26px;}
+
+  /* app store button */
+  .store{display:inline-flex; align-items:center; gap:12px; text-decoration:none;
+    background:#111; color:#fff; padding:13px 22px 13px 20px; border-radius:14px;
+    box-shadow:0 8px 22px rgba(0,0,0,.22); transition:transform .12s, box-shadow .12s;}
+  .store:hover{transform:translateY(-2px); box-shadow:0 12px 28px rgba(0,0,0,.28);}
+  .store svg{width:26px; height:26px; fill:#fff; flex:none;}
+  .store .t{text-align:left; line-height:1.15;}
+  .store .t small{display:block; font-size:11px; opacity:.85; font-weight:500;}
+  .store .t b{display:block; font-size:19px; font-weight:600; letter-spacing:.3px;}
+  .note{margin-top:14px; font-size:13px; color:var(--muted);}
+
+  /* shots */
+  .shots{display:flex; gap:20px; justify-content:center; flex-wrap:wrap; padding:48px 22px 8px;}
+  .shots img{width:220px; max-width:60vw; border-radius:20px;
+    border:1px solid var(--line); box-shadow:0 12px 30px rgba(90,50,20,.16); background:#000;}
+
+  /* features */
+  .features{padding:44px 22px 8px;}
+  .features h2{text-align:center; font-size:24px; margin:0 0 28px;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;}
+  .feat{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px 22px;}
+  .feat .ic{font-size:26px;}
+  .feat h3{font-size:17px; margin:8px 0 6px;}
+  .feat p{font-size:14.5px; color:#4a3d2c; margin:0;}
+
+  footer{text-align:center; color:var(--muted); font-size:13px; padding:46px 22px 40px; margin-top:30px; border-top:1px solid var(--line);}
+  footer a{color:var(--broth-d); text-decoration:none;}
+  footer .links{margin-bottom:8px;}
+
+  @media (max-width:560px){
+    .hero h1{font-size:32px;} .hero{padding:48px 18px 32px;}
+    .shots{gap:14px;}
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <img class="logo" src="logo.png" alt="拉麵怪奇物語">
+    <h1>拉麵怪奇物語</h1>
+    <div class="sub">深夜手作的解壓拉麵</div>
+    <p class="tag">站在料理台後，從湯鍋舀一勺黃油湯、從麵鍋撈起長長的麵線、灑上客人要的配料——一次只做一碗，做好眼前這碗就好。</p>
+
+    <a class="store" href="https://apps.apple.com/app/id6782641107" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.36 1.43c.02 1.06-.37 2.05-1.04 2.78-.7.77-1.85 1.37-2.96 1.28-.13-1.04.38-2.13 1.01-2.8.71-.77 1.94-1.34 2.99-1.26zM20.3 17.2c-.54 1.25-.8 1.8-1.5 2.9-.97 1.53-2.34 3.43-4.03 3.45-1.5.01-1.89-.98-3.93-.97-2.04.01-2.46.99-3.96.98-1.69-.02-2.98-1.74-3.95-3.27-2.72-4.29-3-9.32-1.32-12 1.19-1.9 3.07-3.01 4.84-3.01 1.8 0 2.93 1 4.42 1 1.44 0 2.32-1 4.4-1 1.58 0 3.25.86 4.44 2.35-3.9 2.14-3.27 7.71.55 9.54z"/></svg>
+      <span class="t"><small>Download on the</small><b>App Store</b></span>
+    </a>
+    <div class="note">App Store 審核中，即將上架 · iPhone / iPad · 免費</div>
+  </section>
+
+  <section class="shots">
+    <img src="shots/menu.png" alt="菜單畫面">
+    <img src="shots/cook.png" alt="做麵畫面">
+    <img src="shots/win.png" alt="製作成功">
+  </section>
+
+  <section class="features wrap">
+    <h2>關於這碗麵</h2>
+    <div class="grid">
+      <div class="feat"><div class="ic">🍜</div><h3>純手作手感</h3><p>舀湯、撈麵、灑料，每一下點擊都立刻有回饋與音效，沒有多餘的選單與數值。</p></div>
+      <div class="feat"><div class="ic">🥢</div><h3>一次一單</h3><p>不經營、不排隊、不數錢。畫面上永遠只有一張訂單，做對就完成，乾淨俐落。</p></div>
+      <div class="feat"><div class="ic">🔥</div><h3>火候即技巧</h3><p>撈麵的時機決定星級——剛剛好三星，太生或過頭兩星，全局唯一的手感較量。</p></div>
+      <div class="feat"><div class="ic">🌸</div><h3>可把玩的店面</h3><p>菜單牆上的版本貼紙與一朵小花都能拖到任意處，擺出自己的店，位置永久存檔。</p></div>
+      <div class="feat"><div class="ic">🟡</div><h3>像素繁中字</h3><p>卡通插圖配點陣繁體字，平滑圖與像素字的對比質感；高 DPI 下曲線依然銳利。</p></div>
+      <div class="feat"><div class="ic">📱</div><h3>直式・離線</h3><p>單手直握即玩，純單機離線，不收集任何資料、零追蹤、零廣告。</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="links">
+      <a href="https://apps.apple.com/app/id6782641107" target="_blank" rel="noopener">App Store</a> ·
+      <a href="https://argoodies.github.io/ramen-ya-privacy/" target="_blank" rel="noopener">隱私政策</a>
+    </div>
+    拉麵怪奇物語 · © 2026 ARGoodies
+  </footer>
+
+</body>
+</html>
